@@ -1,8 +1,11 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
     --fonte-Inter: 'Inter', sans-serif;
     --azul-escuro: #17043F;
+    --background-dark: #17043F;
+    --text-light: #FFFFFF;
 }
 
 * {
@@ -10,27 +13,36 @@
     padding: 0;
 }
 
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
 
 .cabecalho {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 85px;
+    background-color: #FFFFFF;
+}
+
+.cabecalho a {
+    color: var(--azul-escuro); 
 }
 
 .cabecalho img {
     width: 210px;
     height: 70px;
-
 }
 
 .menu__nav {
     display: flex;
 }
+
 .menu__nav li {
     margin: 0 3em 0 5em;
     list-style-type: none;
 }
+
 .menu__nav a {
     text-decoration: none;
     font-family: var(--fonte-Inter);
@@ -65,11 +77,12 @@
     align-items: center;
     height: 800px;
     margin-top: -8em;
-
 }
+
 .sec2__token {
     width: 1000px;
     height: 500px;
+    transition: display 0.5s ease;
 }
 
 .sec3__transacao {
@@ -82,8 +95,7 @@
 
 .btn__vender {
     text-decoration: none;
-    background-color: black;
-    width: 200px;
+    width: 220px;
     height: 80px;
     display: flex;
     align-items: center;
@@ -99,7 +111,7 @@
 
 .btn__saibaMais {
     text-decoration: none;
-    width: 200px;
+    width: 220px;
     height: 80px;
     display: flex;
     align-items: center;
@@ -119,6 +131,7 @@
     justify-content: space-evenly;
     gap: 2em;
 }
+
 .sec4__infos h4 {
     width: 380px;
     font-family: var(--fonte-Inter);
@@ -131,6 +144,7 @@
 .sec4__infos ul {
     margin-top: 5em;
 }
+
 .sec4__infos li {
     font-family: var(--fonte-Inter);
     font-style: italic;
@@ -139,11 +153,72 @@
     color: var(--azul-escuro);
 }
 
-
 .linha-vertical {
-    width: 1px;             /* Largura da linha */
-    height: 220px;          /* Altura da linha */
-    background-color: black; /* Cor da linha */
-    margin-left: 20px;      /* Posição da linha */
+    width: 1px;
+    height: 220px;
+    background-color: black;
+    margin-left: 20px;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+footer h2 {
+    font-family: var(--fonte-Inter);
+    font-weight: 800;
+    font-style: italic;
+    color: var(--azul-escuro);
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+}
+
+body.dark-mode .menu__nav a,
+body.dark-mode h2, 
+body.dark-mode h4, 
+body.dark-mode li {
+    color: var(--text-light);
+}
+
+body.dark-mode .btn__vender {
+    background-color: #00FF0A;
+    color: white;
+}
+
+body.dark-mode .btn__saibaMais {
+    background-color: white;
+    color: var(--azul-escuro);
+}
+
+body.dark-mode .linha-vertical {
+    background-color: #FFFFFF;
+}
+
+.btn__darkMode {
+    background-color: #FFFFFF;
+    color: #17043F;
+    border: none;
+    padding: 10px 20px;
+    font-family: var(--fonte-Inter);
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.btn__darkMode:hover {
+    background-color: #D9D9D9;
+}
+body.dark-mode .cabecalho {
+    background-color: #FFFFFF;
+}
+body.dark-mode .cabecalho a {
+    color: var(--azul-escuro);
+}
