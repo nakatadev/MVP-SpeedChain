@@ -48,7 +48,9 @@ body {
     font-family: var(--fonte-Inter);
     font-weight: 700;
     color: var(--azul-escuro);
+    width: 300px;
 }
+
 
 .icone__usuario {
     width: 130px !important;
@@ -221,4 +223,44 @@ body.dark-mode .cabecalho {
 }
 body.dark-mode .cabecalho a {
     color: var(--azul-escuro);
+}
+
+.sec1__colecoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1__ultimas {
+    width: 1000px;
+    height: 500px;
+    margin-top: 2em;
+    background-color: #17043F;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sec1__ultimas h1{
+    font-size: 40px;
+    color: white;
+    margin: 0.5em 0 0 0.5em;
+    font-family: var(--fonte-Inter);
+}
+
+.sec1__ultimas p{
+    font-size: 20px;
+    color: white;
+    margin: 0 0 0 1.2em;
+    font-family: var(--fonte-Inter);
+}
+
+.colecoes {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    grid-template-columns: 280px 280px 280px;
+    gap: 3.3em;
+    margin-top: 1em;
 }
